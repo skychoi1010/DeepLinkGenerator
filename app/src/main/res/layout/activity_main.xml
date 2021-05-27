@@ -26,13 +26,13 @@
                 android:layout_marginBottom="15dp"
                 app:layout_constraintVertical_chainStyle="packed"
                 app:layout_constraintVertical_bias="0"
-                app:layout_constraintBottom_toTopOf="@id/text1"
+                app:layout_constraintBottom_toTopOf="@id/title_add"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
 
             <TextView
-                android:id="@+id/text1"
+                android:id="@+id/title_add"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Add Path"
@@ -40,13 +40,13 @@
                 android:textSize="16sp"
                 app:layout_constraintHorizontal_bias="0"
                 android:layout_marginLeft="20dp"
-                app:layout_constraintBottom_toTopOf="@id/add_path"
+                app:layout_constraintBottom_toTopOf="@id/cl_add_path"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/button" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/add_path"
+                android:id="@+id/cl_add_path"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="20dp"
@@ -55,7 +55,7 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/button_add"
-                app:layout_constraintTop_toBottomOf="@id/text1">
+                app:layout_constraintTop_toBottomOf="@id/title_add">
 
                 <TextView
                     android:id="@+id/tv_original_path"
@@ -88,14 +88,14 @@
                 android:textAllCaps="false"
                 android:layout_marginBottom="20dp"
                 app:layout_constraintVertical_chainStyle="packed"
-                app:layout_constraintTop_toBottomOf="@id/add_path"
+                app:layout_constraintTop_toBottomOf="@id/cl_add_path"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/text2"/>
+                app:layout_constraintBottom_toTopOf="@id/title_braze"/>
 
 
             <TextView
-                android:id="@+id/text2"
+                android:id="@+id/title_braze"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="To Braze Mode"
@@ -103,13 +103,13 @@
                 android:textSize="16sp"
                 app:layout_constraintHorizontal_bias="0"
                 android:layout_marginLeft="20dp"
-                app:layout_constraintBottom_toTopOf="@id/braze_mode"
+                app:layout_constraintBottom_toTopOf="@id/cl_braze_mode"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/button_add" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/braze_mode"
+                android:id="@+id/cl_braze_mode"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="20dp"
@@ -117,7 +117,7 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/button_braze"
-                app:layout_constraintTop_toBottomOf="@id/text2">
+                app:layout_constraintTop_toBottomOf="@id/title_braze">
 
                 <TextView
                     android:id="@+id/tv_intent_info"
@@ -152,14 +152,14 @@
                 android:textAllCaps="false"
                 android:layout_marginBottom="20dp"
                 app:layout_constraintVertical_chainStyle="packed"
-                app:layout_constraintTop_toBottomOf="@id/braze_mode"
+                app:layout_constraintTop_toBottomOf="@id/cl_braze_mode"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/text"/>
+                app:layout_constraintBottom_toTopOf="@id/title_custom"/>
 
 
             <TextView
-                android:id="@+id/text"
+                android:id="@+id/title_custom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Custom Deep Link"
@@ -167,20 +167,20 @@
                 android:textSize="16sp"
                 app:layout_constraintHorizontal_bias="0"
                 android:layout_marginLeft="20dp"
-                app:layout_constraintBottom_toTopOf="@id/custom_link"
+                app:layout_constraintBottom_toTopOf="@id/cl_custom"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/button_braze" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/custom_link"
+                android:id="@+id/cl_custom"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="20dp"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/button_custom"
-                app:layout_constraintTop_toBottomOf="@id/text">
+                app:layout_constraintTop_toBottomOf="@id/title_custom">
 
                 <EditText
                     android:id="@+id/et_scheme"
@@ -190,16 +190,16 @@
                     app:layout_constraintHorizontal_chainStyle="packed"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toLeftOf="@id/tv_slash"
+                    app:layout_constraintRight_toLeftOf="@id/tv_dot"
                     android:layout_marginLeft="50dp" />
 
                 <TextView
-                    android:id="@+id/tv_slash"
+                    android:id="@+id/tv_dot"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="://"
-                    app:layout_constraintTop_toTopOf="@id/custom_link"
-                    app:layout_constraintBottom_toBottomOf="@id/custom_link"
+                    app:layout_constraintTop_toTopOf="@id/cl_custom"
+                    app:layout_constraintBottom_toBottomOf="@id/cl_custom"
                     app:layout_constraintLeft_toRightOf="@id/et_scheme"
                     app:layout_constraintRight_toLeftOf="@id/et_host"/>
 
@@ -209,7 +209,7 @@
                     android:layout_height="wrap_content"
                     android:hint="host"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintLeft_toRightOf="@id/tv_slash"
+                    app:layout_constraintLeft_toRightOf="@id/tv_dot"
                     app:layout_constraintRight_toRightOf="parent"
                     android:layout_marginRight="50dp" />
 
@@ -224,13 +224,13 @@
                 android:text="custom deep link"
                 android:textAllCaps="false"
                 app:layout_constraintVertical_chainStyle="packed"
-                app:layout_constraintTop_toBottomOf="@id/custom_link"
+                app:layout_constraintTop_toBottomOf="@id/cl_custom"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/custom_braze_mode"
+                android:id="@+id/cl_custom_braze"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="20dp"
@@ -241,33 +241,33 @@
                 app:layout_constraintTop_toBottomOf="@id/button_custom">
 
                 <TextView
-                    android:id="@+id/tv_intent_info2"
+                    android:id="@+id/tv_intent_info_custom"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="your custom deep link"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintBottom_toTopOf="@id/et_intent_uri2"
+                    app:layout_constraintBottom_toTopOf="@id/et_intent_uri_custom"
                     app:layout_constraintRight_toRightOf="parent"/>
 
                 <TextView
-                    android:id="@+id/tv_intent_info3"
+                    android:id="@+id/tv_info_custom"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="PATH: "
-                    app:layout_constraintTop_toBottomOf="@id/tv_intent_info2"
+                    app:layout_constraintTop_toBottomOf="@id/tv_intent_info_custom"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintRight_toLeftOf="@id/et_intent_uri2"/>
+                    app:layout_constraintRight_toLeftOf="@id/et_intent_uri_custom"/>
 
                 <EditText
-                    android:id="@+id/et_intent_uri2"
+                    android:id="@+id/et_intent_uri_custom"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:hint="PATH"
                     android:textAlignment="center"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintLeft_toRightOf="@id/tv_intent_info3"
+                    app:layout_constraintLeft_toRightOf="@id/tv_info_custom"
                     app:layout_constraintRight_toRightOf="parent"
                     android:gravity="center_horizontal" />
 
@@ -281,7 +281,7 @@
                 android:text="custom deep link - braze mode"
                 android:textAllCaps="false"
                 app:layout_constraintVertical_chainStyle="packed"
-                app:layout_constraintTop_toBottomOf="@id/custom_braze_mode"
+                app:layout_constraintTop_toBottomOf="@id/cl_custom_braze"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"/>

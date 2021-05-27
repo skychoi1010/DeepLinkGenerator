@@ -54,11 +54,11 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        tv_intent_info2?.text = "URI: your custom deep link\n" +
+        tv_intent_info_custom?.text = "URI: your custom deep link\n" +
                 "intent.putExtra('source', 'Appboy')\n" +
                 "intent.putExtra('uri', 'PATH')"
 
-        et_intent_uri2?.run {
+        et_intent_uri_custom?.run {
             setText("inner://")
             setSelection(8)
         }
@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
             val url = "${et_scheme?.text.toString()}://${et_host?.text.toString()}"
             val i = Intent(Intent.ACTION_VIEW)
             i.putExtra("source", "Appboy")
-            i.putExtra("uri", "${et_intent_uri2?.text.toString()}")
+            i.putExtra("uri", "${et_intent_uri_custom?.text.toString()}")
             i.data = Uri.parse(url)
             try {
                 startActivity(i)
