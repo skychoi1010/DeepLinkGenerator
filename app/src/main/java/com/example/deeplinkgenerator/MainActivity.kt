@@ -46,10 +46,10 @@ class MainActivity : AppCompatActivity() {
             val url = "${et_scheme?.text.toString()}://${et_host?.text.toString()}"
             val i = Intent(Intent.ACTION_VIEW)
             i.data = Uri.parse(url)
-            if (i.resolveActivity(packageManager) == null) {
-                Toast.makeText(this, "no app available for '$url'", Toast.LENGTH_SHORT).show()
-            } else {
+            try {
                 startActivity(i)
+            } catch (e: ActivityNotFoundException) {
+                Toast.makeText(this, "no app available for '$url'", Toast.LENGTH_SHORT).show()
             }
         }
 
@@ -69,10 +69,10 @@ class MainActivity : AppCompatActivity() {
             i.putExtra("source", "Appboy")
             i.putExtra("uri", "${et_intent_uri2?.text.toString()}")
             i.data = Uri.parse(url)
-            if (i.resolveActivity(packageManager) == null) {
-                Toast.makeText(this, "no app available for '$url'", Toast.LENGTH_SHORT).show()
-            } else {
+            try {
                 startActivity(i)
+            } catch (e: ActivityNotFoundException) {
+                Toast.makeText(this, "no app available for '$url'", Toast.LENGTH_SHORT).show()
             }
         }
     }
