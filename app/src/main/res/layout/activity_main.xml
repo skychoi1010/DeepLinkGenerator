@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="20dp">
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="https://cashwalk.io"
+                android:textAllCaps="false"
+                android:layout_marginBottom="15dp"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:layout_constraintVertical_bias="0"
+                app:layout_constraintBottom_toTopOf="@id/text1"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Path"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                app:layout_constraintHorizontal_bias="0"
+                android:layout_marginLeft="20dp"
+                app:layout_constraintBottom_toTopOf="@id/add_path"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/add_path"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:paddingHorizontal="20dp"
+                android:layout_marginHorizontal="50dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/button_add"
+                app:layout_constraintTop_toBottomOf="@id/text1">
+
+                <TextView
+                    android:id="@+id/tv_original_path"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="https://cashwalk.io/"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/et_path"/>
+
+                <EditText
+                    android:id="@+id/et_path"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="path"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/tv_original_path"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <Button
+                android:id="@+id/button_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="path added link"
+                android:textAllCaps="false"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:layout_constraintTop_toBottomOf="@id/add_path"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/text2"/>
+
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="To Braze Mode"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                app:layout_constraintHorizontal_bias="0"
+                android:layout_marginLeft="20dp"
+                app:layout_constraintBottom_toTopOf="@id/braze_mode"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_add" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/braze_mode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:paddingHorizontal="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/button_braze"
+                app:layout_constraintTop_toBottomOf="@id/text2">
+
+                <TextView
+                    android:id="@+id/tv_intent_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="https://cashwalk.io"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/et_intent_uri"/>
+
+                <EditText
+                    android:id="@+id/et_intent_uri"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:hint="PATH"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/tv_intent_info"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:gravity="center_horizontal" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <Button
+                android:id="@+id/button_braze"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="braze mode link"
+                android:textAllCaps="false"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:layout_constraintTop_toBottomOf="@id/braze_mode"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/text"/>
+
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter Custom Deep Link"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                app:layout_constraintHorizontal_bias="0"
+                android:layout_marginLeft="20dp"
+                app:layout_constraintBottom_toTopOf="@id/custom_link"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_braze" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/custom_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/button_custom"
+                app:layout_constraintTop_toBottomOf="@id/text">
+
+                <EditText
+                    android:id="@+id/et_scheme"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="scheme"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/tv_slash"
+                    android:layout_marginLeft="50dp" />
+
+                <TextView
+                    android:id="@+id/tv_slash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="://"
+                    app:layout_constraintTop_toTopOf="@id/custom_link"
+                    app:layout_constraintBottom_toBottomOf="@id/custom_link"
+                    app:layout_constraintLeft_toRightOf="@id/et_scheme"
+                    app:layout_constraintRight_toLeftOf="@id/et_host"/>
+
+                <EditText
+                    android:id="@+id/et_host"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="host"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/tv_slash"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginRight="50dp" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <Button
+                android:id="@+id/button_custom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="custom deep link"
+                android:textAllCaps="false"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:layout_constraintTop_toBottomOf="@id/custom_link"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/custom_braze_mode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:paddingHorizontal="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/button_custom_braze"
+                app:layout_constraintTop_toBottomOf="@id/button_custom">
+
+                <TextView
+                    android:id="@+id/tv_intent_info2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="your custom deep link"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/et_intent_uri2"/>
+
+                <EditText
+                    android:id="@+id/et_intent_uri2"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:hint="PATH"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/tv_intent_info2"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:gravity="center_horizontal" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/button_custom_braze"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="custom deep link - braze mode"
+                android:textAllCaps="false"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:layout_constraintTop_toBottomOf="@id/custom_braze_mode"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
